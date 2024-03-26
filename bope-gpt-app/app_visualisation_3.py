@@ -5,9 +5,11 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import numpy as np
 from flask import request
+from flask_cors import CORS  # Step 1: Import CORS
 
 # Initialize Flask server
 server = flask.Flask(__name__)
+CORS(server)  # Step 2: Apply CORS to your Flask server instance. This enables CORS for all routes.
 
 # Initialize the Dash app
 app = dash.Dash(__name__, server=server)
