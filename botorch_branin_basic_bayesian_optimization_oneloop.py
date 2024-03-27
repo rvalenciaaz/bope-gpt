@@ -35,6 +35,7 @@ def branin(x, negate=False):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 dtype = torch.float64
+
 bounds = torch.tensor([[0., 0.], [1., 1.]], dtype=dtype, device=device)
 
 N = 7
